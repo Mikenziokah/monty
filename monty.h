@@ -39,8 +39,8 @@ typedef struct instruction_s
 } instruction_t;
 int main(int argc, char *argv[]);
 void push_pall(stack_t **head, char *token, unsigned int counter);
-void pall(stack_t **head, unsigned int counter);
-void push(stack_t **head, unsigned int counter);
-void pop(stack_t **head, unsigned int counter);
-void pint(stack_t **head, unsigned int counter);
+void pall_f(stack_t **head, unsigned int counter);
+void push_f(stack_t **head, unsigned int counter);
+void pop_f(stack_t **head, unsigned int counter);
+void pint_f(stack_t **head, unsigned int counter);
 #endif

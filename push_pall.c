@@ -9,10 +9,10 @@
 void push_pall(stack_t **head, char *token, unsigned int counter)
 {
 	instruction_t selector[] = {
-		{"push", push},
-		{"pall", pall},
-		{"pint", pint},
-		{"pop", pop},
+		{"push", push_f},
+		{"pall", pall_f},
+		{"pint", pint_f},
+		{"pop", pop_f},
 		{NULL, NULL}
 	};
 
