@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "unable to open the file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while ((file = getline(&token, &bufsize, fl)) != -1)
+	while ((fgets(file(&token, &bufsize, fl)) != -1))
 	{
 		line_number = strtok(token, LIMITER);
 		x++;
