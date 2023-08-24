@@ -1,4 +1,6 @@
 #include "monty.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - monty main program
  * @argc: arguments
@@ -8,7 +10,6 @@
 int main(int argc, char *argv[])
 {
 	FILE *fl;
-	ssize_t new_file;
 	size_t bufsize;
 	stack_t *head;
 	unsigned int x = 0;
@@ -25,8 +26,13 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "unable to open the file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while ((getline = new_file(&token, &bufsize, fl)) != -1)
+	while (fgets(line_number, sizeof(line_number), fl))
 	{
+		bufsize = strlen(line_number);
+			if (bufsize > 0 && line_number[bufsize - 1] == '\n')
+			{
+				line_number[bufsize - 1] = '\0';
+			}
 		line_number = strtok(token, LIMITER);
 		x++;
 		if (line_number)
@@ -39,4 +45,3 @@ int main(int argc, char *argv[])
 	fclose(fl);
 	return (0);
 }
-
