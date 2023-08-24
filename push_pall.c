@@ -27,7 +27,7 @@ void push_pall(stack_t **head, char *file, unsigned int counter)
 		}
 		travel++;
 	}
-	if (file[0] != '*')
+	if (file[0] != '#')
 	{
 		fprint(stderr, "L%U: no instruction passed %s\n", counter, file);
 		exit(EXIT_FAILURE);
