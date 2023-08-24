@@ -36,7 +36,9 @@ int main(int argc, char *argv[])
 		line_number = strtok(token, LIMITER);
 		x++;
 		if (line_number)
+		{
 			push_pall(&head, line_number, x);
+		}
 		else if (!line_number)
 			continue;
 	}
