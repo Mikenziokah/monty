@@ -8,11 +8,11 @@
  */
 void push_pall(stack_t **head, char *file, unsigned int counter)
 {
-	call_t selector[] = {
+	instruction_t selector[] = {
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
-		{"pop", pop}
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
