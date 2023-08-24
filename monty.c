@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
 	FILE *fl;
-	ssize_t file;
+	ssize_t new_file;
 	size_t bufsize;
 	stack_t *head;
 	unsigned int x = 0;
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "unable to open the file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while ((fgets(file(&token, &bufsize, fl)) != -1))
+	while ((getline = new_file(&token, &bufsize, fl)) != -1)
 	{
 		line_number = strtok(token, LIMITER);
 		x++;
