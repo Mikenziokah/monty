@@ -1,13 +1,14 @@
 #include "monty.h"
 /**
  * _pint - value on top
- * @hea:d double pointer
+ * @head: double pointer
  * @line_number: line number
  */
 void _pint(stack_t **head, unsigned int line_number)
 {
 	stack_t *new;
-	new = *top;
+
+	new = *head;
 
 	if (new == NULL)
 	{
