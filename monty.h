@@ -5,6 +5,8 @@
 #include <sys/types.h>
 #include <ctype.h>
 #include <string.h>
+
+#define LIMITER " \n"
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -36,4 +38,8 @@ typedef struct instruction_s
 } instruction_t;
 int main(int argc, char *argv[]);
 void push_pall(stack_t **head, char *file, unsigned int counter);
+void pall(stack_t **head, unsigned int counter);
+void push(stack_t **head, unsigned int counter);
+void pop(stack_t **head, unsigned int counter);
+void pint(stack_t **head, unsigned int counter);
 #endif

@@ -29,7 +29,7 @@ void push_pall(stack_t **head, char *file, unsigned int counter)
 	}
 	if (file[0] != '#')
 	{
-		fprint(stderr, "L%U: no instruction passed %s\n", counter, file);
+		fprintf(stderr, "L%U: no instruction passed %s\n", counter, file);
 		exit(EXIT_FAILURE);
 	}
 }

@@ -16,13 +16,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		fprintf(sterr, "monty file formart\n");
+		fprintf(stderr, "monty file formart\n");
 		exit(EXIT_FAILURE);
 	}
 	fl = fopen(argv[1], "r");
 	if (fl == NULL)
 	{
-		fprintf("unable to open the file %s\n", argv[1]);
+		fprintf(stderr, "unable to open the file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while ((file = getline(&token, &bufsize, fl)) != -1)
