@@ -2,11 +2,11 @@
 /**
  * push_pall - calls a function when needed
  * @head: head of the list
- * @file: files
+ * @token: files
  * @counter: number of the lines
  * Return: Always 0
  */
-void push_pall(stack_t **head, char *file, unsigned int counter)
+void push_pall(stack_t **head, char *token, unsigned int counter)
 {
 	instruction_t selector[] = {
 		{"push", push},
@@ -20,16 +20,16 @@ void push_pall(stack_t **head, char *file, unsigned int counter)
 
 	while (travel < 10)
 	{
-		if (strcmp(selector[travel].opcode, file) == 0)
+		if (strcmp(selector[travel].opcode, token) == 0)
 		{
-			selector[travel].f(head, counter)
+			selector[travel].f(head, counter);
 				return;
 		}
 		travel++;
 	}
-	if (file[0] != '#')
+	if (token[0] != '#')
 	{
-		fprintf(stderr, "L%U: no instruction passed %s\n", counter, file);
+		fprintf(stderr, "L%u: no instruction passed %s\n", counter, token);
 		exit(EXIT_FAILURE);
 	}
 }
