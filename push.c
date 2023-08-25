@@ -1,5 +1,9 @@
 #include "monty.h"
-#include <stdlib.h>
+/**
+ * push - works in conjuction with pall
+ * @stack:node
+ * @value: number
+ */
 
 void push(stack_t **stack, int value)
 {
