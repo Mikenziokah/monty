@@ -38,9 +38,11 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 int main(int argc, char *argv[]);
-void push_pall(stack_t **head, char *token, unsigned int counter);
-void pall_f(stack_t **head, unsigned int counter);
-void push_f(stack_t **head, unsigned int counter);
-void pop_f(stack_t **head, unsigned int counter);
-void pint_f(stack_t **head, unsigned int counter);
+
+int is_valid_number(const char *str);
+void push(stack_t **stack, int value);
+void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void free_stack(stack_t *stack);
 #endif

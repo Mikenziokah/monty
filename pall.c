@@ -1,0 +1,11 @@
+#include "monty.h"
+#include <stdlib.h>
+
+void pall(stack_t **stack, unsigned int line_number)
+{
+    (void)stack;
+    (void)line_number;
+
+    /* Implementation of the push function */
+}
+

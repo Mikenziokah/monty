@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- * _pint - value on top
+ * pint - value on top
  * @head: double pointer
  * @line_number: line number
  */
-void _pint(stack_t **head, unsigned int line_number)
+void pint(stack_t **head, unsigned int line_number)
 {
 	stack_t *new;
 
